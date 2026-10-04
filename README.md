@@ -25,6 +25,20 @@ flowchart LR
 
 ---
 
+## 💻 Infrastructure & Software Technology Stack
+
+| Layer | Technology & Tools | Production Role |
+|---|---|---|
+| **Multi-Cloud Ingress & Egress** | Azure OpenAI (East US 2, Sweden Central), OpenAI Global | Geographically distributed model deployments with regional quota pools |
+| **Broker Runtime & Engine** | Python 3.11+, AsyncIO, Custom Sliding-Window Deque | Sub-millisecond routing decisions based on real-time headroom and cost weights |
+| **Resilience & Rate-Limit Circuit**| Cooldown State Machine, Exponential Jitter Backoff | Automatic detection of HTTP 429 responses, honoring `Retry-After` headers |
+| **Capacity Reservation & Tiers** | Custom Priority Allocator | Partitioned TPM allocations: Interactive (60%), Batch (30%), Experimental (10%) |
+| **Compliance & Data Residency** | Regional Boundary Filters | Guarantees sensitive European data remains within Sweden Central / EU boundaries |
+| **Observability & Metrics** | Prometheus Counters & Gauges, OpenTelemetry Tracing | Live tracking of tokens-per-minute (TPM) and requests-per-minute (RPM) headroom |
+| **Client Protocols & Interfaces** | OpenAI Python SDK 1.50+, HTTPX Connection Pools | Drop-in proxy client compatibility for enterprise application microservices |
+
+---
+
 ## 🚀 Features
 
 | Feature | How it works |
